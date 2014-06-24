@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="modules/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="modules/mebox/css/mebox.css" rel="stylesheet" type="text/css"/>
+    <link href="modules/webuploader/webuploader.css" rel="stylesheet" type="text/css"/>
+
+    <script>
+        function aa(event){
+            console.log(event);
+        }
+    </script>
+</head>
+<body>
+    <button type="button" class="btn btn-default" onclick="mebox.createUploadDialog()">Default</button>
+
+    <textarea id="e--LargeFileList" name="LargeFileList"></textarea>
+    <div id="e--ShowLargeFileListId"></div>
+
+    <div style="min-height:100px;background-color:#F0F8F0;border-color:#C5D8C5;border-radius:2px;border-width:1px;border-style:solid;margin:10px">
+        <div style="border-width: 0 0 1px;border-style: solid;margin:10px;color:#e0e0e0;">
+            <strong style="font-family:'Microsoft Yahei',verdana;color:#222;">超大附件</strong>
+        </div>
+        <div style="margin: 10px">
+            <div>
+                <span style="margin-right:5px;margin-top:3px;cursor:pointer;">
+                    <a href="www.baidu.com" style="color:#000000" target="_blank">ces.doc</a>
+                    <span style="color:#999999">&nbsp;(123.5M)</span>
+                </span>
+            </div>
+            <div>
+                <span style="margin-right:5px;margin-top:3px;cursor:pointer;">
+                    <a href="www.baidu.com" style="color:#000000" target="_blank">ces.doc</a>
+                    <span style="color:#999999">&nbsp;(123.5M)</span>
+                </span>
+            </div>
+            <div>
+                <span style="margin-right:5px;margin-top:3px;cursor:pointer;">
+                    <a href="www.baidu.com" style="color:#000000" target="_blank">ces.doc</a>
+                    <span style="color:#999999">&nbsp;(123.5M)</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script id="T_LF_MailBody" type="text/html">
+        <div class="mailBody-LF" style="float:left;bottom:0;position:absolute;min-height:100px;background-color:#F0F8F0;border-color:#C5D8C5;border-radius:2px;border-width:1px;border-style:solid;margin:10px">
+            <div style="border-width: 0 0 1px;border-style: solid;margin:10px;color:#e0e0e0;">
+                <strong style="font-family:'Microsoft Yahei',verdana;color:#222;">超大附件</strong>
+            </div>
+            <div style="margin:10px">
+                <%=fileList%>
+            </div>
+        </div>
+    </script>
+
+    <script id="T_ShowLargeFile" type="text/html">
+        <%for(var i=0,file;file=files[i++];){%>
+            <div>
+                <img src="modules/mebox/img/LargeFile.png"/>
+                <span style="margin-right:5px;margin-top:3px;cursor:pointer;">
+                    <a href="<%=file.URL%>" style="color:#000000" target="_blank"><%=file.name%></a>
+                    <span style="color:#999999">&nbsp;(<%=file.size%>)</span>
+                </span>
+                <a onclick="mebox.removeFile(this)">删除</a>
+            </div>
+        <%}%>
+    </script>
+
+    <script id="T_dialogContent" type="text/html">
+        <div>
+            <div class="mebox-uploadDiv">
+                <div id="filePicker">上传新文件...</div>
+            </div>
+            <br/><br/><br/><br/><br/><br/><br/><br/>
+            <div style="text-align:center;">
+                <button type="button" class="btn btn-primary" onclick="mebox.showFileList()">从网盘中选择</button>
+            </div>
+        </div>
+    </script>
+
+    <script id="T_FileUploadContent" type="text/html">
+        <%for(var i=0,file;file=files[i++];){%>
+            <div class="FU_item">
+                <span class="file-name img-icon" style="float: left"></span>
+                <div class="FU_item_content">
+                    <div>
+                        <span class="FU_filename"><%=file.name%></span>
+                        <span style="color:#999999">(<%=WebUploader.Base.formatSize(file.size, 2, ['B', 'K', 'M', 'G', 'TB'] )%>)</span>
+                    </div>
+                    <div>
+                        <div class="progress progress-striped active">
+                            <div id="progress_<%=file.id%>" class="progress-bar"  role="progressbar"  aria-valuemin="0" aria-valuemax="100" style="width: 0"></div>
+                        </div>
+                        <div style="display:none;" id="status_<%=file.id%>"></div>
+                    </div>
+                </div>
+                <div style="float:right" id="operation_<%=file.id%>"></div>
+            </div>
+        <%}%>
+    </script>
+
+    <!-- 引入脚本 -->
+    <script type="text/javascript" src="modules/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="modules/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="modules/webuploader/webuploader.min.js"></script>
+    <script type="text/javascript" src="modules/mebox/js/mebox.dialog.js"></script>
+    <script type="text/javascript" src="modules/mebox/js/mebox.js"></script>
+
+</body>
+</html>

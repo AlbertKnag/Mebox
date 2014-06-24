@@ -1,0 +1,123 @@
+.modal-dialog a,#showLargeFileListId a{
+    text-decoration: none solid rgb(81, 129, 180)!important;
+    cursor:pointer
+}
+.file-name {
+    background: url("../img/file-icon-small.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 31px;
+    vertical-align: middle;
+    width: 38px
+}
+.folder-icon {
+    background-position: 0 -160px;
+}
+.pdf-icon {
+    background-position: 0 -120px;
+}
+.doc-icon {
+    background-position: 0 -80px;
+}
+.xls-icon {
+    background-position: 0 -40px;
+}
+.ppt-icon {
+    background-position: 0 -200px;
+}
+.span-radio{
+    background: url("../img/file-icon-small.png") no-repeat scroll 0px -300px transparent;
+    height: 13px;
+    margin-left: 5px;
+    margin-top: 8px;
+    width: 13px;
+    vertical-align: middle;
+    display: block;
+}
+.span-radio-selected{
+    background: url("../img/file-icon-small.png") no-repeat scroll -20px -300px transparent;
+    height: 13px;
+    margin-left: 5px;
+    margin-top: 8px;
+    width: 13px;
+    vertical-align: middle;
+    display: block;
+}
+
+
+.mebox-uploadDiv {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    top: 50px;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+}
+/*
+.mebox-uploadDiv .mebox-input-file {
+    position: absolute;
+    width:108px;
+    height:35px;
+    top:0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha(opacity=0)";
+    cursor: pointer;
+}
+*/
+
+/*------------ FileUpload相关---------------*/
+.FU_content{
+    border: 1px solid #cbcbcb;
+    background: #f9f9f9;
+    border-radius: 5px;
+    min-height: 388px;
+    font-family: 'lucida Grande', Verdana;
+    font-size: 12px;
+}
+.FU_item{
+    min-height: 60px;
+    border-bottom: 1px solid #cbcbcb;
+    padding:10px;
+}
+.FU_item_content{
+    float: left;
+    width: 70%;
+}
+
+.FU_filename {
+    float: left;
+    max-width: 61%;
+    _width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    _word-break: break-all;
+    _height: 18px;
+    _vertical-align: baseline;
+    _zoom: 1;
+}
+
+.icon_att {
+    margin-top:8px;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-image: url(../img/operation.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.icon_att_finish {
+    background-position: 0 0;
+}
+.icon_att_del {
+    background-position: 0 -24px;
+}
+.icon_att_coutinue {
+    background-position: 0 -48px;
+}
+.icon_att_pause {
+    background-position: 0 -72px;
+}

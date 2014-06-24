@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="modules/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="modules/mebox/css/mebox.css" rel="stylesheet" type="text/css"/>
+    <link href="modules/webuploader/webuploader.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<button type="button" class="btn btn-default" onclick="mebox.createUploadDialog()">Default</button>
+
+
+
+
+<!-- 弹出框中间部分模板 -->
+<!--<script id="T_dialogContent" type="text/html">
+    <div class="mebox-uploadDiv">
+        <form id="meboxForm" method="post" enctype="multipart/form-data" target="meboxIframe">
+            <input type="file" name="meboxFile" class="mebox-input-file" onchange="mebox.getUploadURL(this)"/>
+            <button type="button" class="btn btn-primary">上传新文件...</button>
+        </form>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/>
+    <div style="text-align:center;">
+        <button type="button" class="btn btn-primary" onclick="mebox.showFileList()">从网盘中选择</button>
+    </div>
+    <iframe name="meboxIframe" style="display:none;" frameborder=“0”></iframe>
+</script>-->
+<script id="T_dialogContent" type="text/html">
+    <div class="mebox-uploadDiv">
+        <div id="filePicker">上传新文件...</div>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/>
+    <div style="text-align:center;">
+        <button type="button" class="btn btn-primary" onclick="mebox.showFileList()">从网盘中选择</button>
+    </div>
+</script>
+
+<script id="T_FileUploadContent" type="text/html">
+    <div>11</div>
+</script>
+
+<!-- 引入脚本 -->
+<script type="text/javascript" src="modules/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="modules/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="modules/webuploader/webuploader.min.js"></script>
+<script type="text/javascript" src="modules/mebox/js/mebox.dialog.js"></script>
+<script type="text/javascript" src="modules/mebox/js/mebox.js"></script>
+
+</body>
+</html>
