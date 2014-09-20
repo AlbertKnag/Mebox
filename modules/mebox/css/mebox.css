@@ -24,7 +24,7 @@
 .ppt-icon {
     background-position: 0 -200px;
 }
-.span-radio{
+.mebox-span-radio{
     background: url("../img/file-icon-small.png") no-repeat scroll 0px -300px transparent;
     height: 13px;
     margin-left: 5px;
@@ -33,7 +33,7 @@
     vertical-align: middle;
     display: block;
 }
-.span-radio-selected{
+.mebox-span-radio-selected{
     background: url("../img/file-icon-small.png") no-repeat scroll -20px -300px transparent;
     height: 13px;
     margin-left: 5px;
@@ -73,11 +73,13 @@
     background: #f9f9f9;
     border-radius: 5px;
     min-height: 388px;
+    _height:388px;
     font-family: 'lucida Grande', Verdana;
     font-size: 12px;
 }
 .FU_item{
     min-height: 60px;
+    _height:60px;
     border-bottom: 1px solid #cbcbcb;
     padding:10px;
 }
@@ -120,4 +122,20 @@
 }
 .icon_att_pause {
     background-position: 0 -72px;
+}
+
+/*bootstrap样式冲突问题处理*/
+label{
+    display: inline;
+    font-weight: normal
+}
+table{
+    border-spacing: inherit;
+    border-collapse: separate;
+}
+button, input, select, textarea{
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 4px;
 }

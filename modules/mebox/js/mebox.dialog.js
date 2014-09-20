@@ -26,7 +26,7 @@
         dialogHTML.push('<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>');
         dialogHTML.push('<h4 class="modal-title">'+ config.title +'</h4>');
         dialogHTML.push('</div>');
-        dialogHTML.push('<div class="modal-body" style="min-height: 388px"></div>');
+        dialogHTML.push('<div class="modal-body" style="min-height:388px;_height:388px"></div>');
         dialogHTML.push('<div class="modal-footer" style="padding: 10px 20px 10px;margin-top:0"></div>');
         dialogHTML.push('</div></div></div>');
         var $root   = $(dialogHTML.join(""));
