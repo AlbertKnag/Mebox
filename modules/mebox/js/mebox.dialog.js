@@ -1,7 +1,5 @@
 ﻿/**
- * 弹出框组件
- Example：
-
+ * 弹出框
  */
 (function(factory) {
     var d = window.mebox || (window.mebox = {});
